@@ -1,14 +1,27 @@
+count = 0;
+
 function myFunction() {
-  alert(
-    "Hallo" + gebruiker + ", uw email is" + email + "en uw bericht is" + bericht
+  let gebruiker = document.querySelector('#name').value;
+  let email = document.querySelector('#email').value;
+  let bericht = document.querySelector('#subject').value;
+  let country = document.querySelector('#country').value;
+
+  alert
+  (
+    "Hallo " + gebruiker 
+    + ", uw email is " + email 
+    + ", u bent afkomstig van " + country
+    + " en uw bericht is:  " + bericht
+    + "."
   );
+
+  keepTrackOfCount();
 }
 
-var button = document.getElementById("clickme"),
-  count = 0;
-button.onclick = function () {
-  count += 1;
-  button.innerHTML = count;
+function keepTrackOfCount(){
+  // TODO: Als getal deelbaar is door 4, verander dan de achtergrondkleur van alle tekstvelden
+
+  count++;
   console.log(count);
-};
- 
+}
+
